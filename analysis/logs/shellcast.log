@@ -1,0 +1,68 @@
+09/09/2022 11:39:39 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+
+09/09/2022 11:39:40 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+
+09/09/2022 11:41:23 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error in read_csv(paste0(ndfd_tabular_data_input_path, ndfd_latest_pop12_file_name),  : 
+  could not find function "read_csv"
+
+09/09/2022 11:41:24 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error in read_csv(paste0(ndfd_tabular_data_input_path, ndfd_latest_pop12_file_name),  : 
+  could not find function "read_csv"
+
+09/09/2022 11:43:29 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error: '/opt/project/analysis/assets/nc/data/tabular/outputs/ndfd_sco_data/ndfd_sco_data_rawpop12.csv' does not exist.
+
+09/09/2022 11:43:37 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error: '/opt/project/analysis/assets/nc/data/tabular/outputs/ndfd_sco_data/ndfd_sco_data_rawpop12.csv' does not exist.
+
+09/09/2022 11:46:55 PM /opt/project/analysis/src/procs/shellcast.py ERROR    AttributeError	procs/shellcast.py:75
+	'ShellCast' object has no attribute 'spatial_iata_dir'
+09/09/2022 11:46:56 PM /opt/project/analysis/src/procs/shellcast.py ERROR    AttributeError	procs/shellcast.py:75
+	'ShellCast' object has no attribute 'spatial_iata_dir'
+09/09/2022 11:47:40 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+
+09/09/2022 11:47:41 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+
+09/09/2022 11:48:52 PM /opt/project/analysis/src/procs/shellcast.py ERROR    KeyError	rinterface_lib/sexp.py:381
+	"'ndfd_convert_df_to_raster' not found"
+09/09/2022 11:48:53 PM /opt/project/analysis/src/procs/shellcast.py ERROR    KeyError	rinterface_lib/sexp.py:381
+	"'ndfd_convert_df_to_raster' not found"
+09/09/2022 11:54:35 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error in st_read(paste0(sga_spatial_data_input_path, "sga_bounds_10kmbuf_albers.shp")) : 
+  could not find function "st_read"
+
+09/09/2022 11:54:41 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error in st_read(paste0(sga_spatial_data_input_path, "sga_bounds_10kmbuf_albers.shp")) : 
+  could not find function "st_read"
+
+09/09/2022 11:55:42 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error: Cannot open "/opt/project/analysis/assets/nc/data/spatial/outputs/ncdmf_data/sga_bounds/sga_bounds_10kmbuf_albers.shp"; The file doesn't seem to exist.
+
+09/09/2022 11:55:50 PM /opt/project/analysis/src/procs/shellcast.py ERROR    RRuntimeError	rpy2/rinterface.py:815
+	Error: Cannot open "/opt/project/analysis/assets/nc/data/spatial/outputs/ncdmf_data/sga_bounds/sga_bounds_10kmbuf_albers.shp"; The file doesn't seem to exist.
+
+09/12/2022 03:23:53 PM /opt/project/analysis/src/procs/shellcast.py ERROR    AttributeError	procs/shellcast.py:100
+	module 'analysis.src.forecast_nc.procs.rf_model_precip_v2' has no attribute 'main'
+09/12/2022 03:23:54 PM /opt/project/analysis/src/procs/shellcast.py ERROR    AttributeError	procs/shellcast.py:100
+	module 'analysis.src.forecast_nc.procs.rf_model_precip_v2' has no attribute 'main'
+09/12/2022 03:26:25 PM /opt/project/analysis/src/procs/shellcast.py ERROR    TypeError	procs/shellcast.py:100
+	__init__() missing 2 required positional arguments: 'ndfd_data_dir' and 'rf_models_dir'
+09/12/2022 03:26:26 PM /opt/project/analysis/src/procs/shellcast.py ERROR    TypeError	procs/shellcast.py:100
+	__init__() missing 2 required positional arguments: 'ndfd_data_dir' and 'rf_models_dir'
+09/12/2022 03:27:17 PM analysis.src.forecast_nc.procs.rf_model_precip_v2 ERROR    FileNotFoundError	joblib/numpy_pickle.py:579
+	[Errno 2] No such file or directory: '/joblib_RL24_Model.pkl'
+09/12/2022 03:27:19 PM analysis.src.forecast_nc.procs.rf_model_precip_v2 ERROR    FileNotFoundError	joblib/numpy_pickle.py:579
+	[Errno 2] No such file or directory: '/joblib_RL24_Model.pkl'
+09/12/2022 05:16:11 PM analysis.src.procs.rf_model_precip ERROR    FileNotFoundError	joblib/numpy_pickle.py:579
+	[Errno 2] No such file or directory: '/joblib_RL24_Model.pkl'
+09/12/2022 05:16:13 PM analysis.src.procs.rf_model_precip ERROR    FileNotFoundError	joblib/numpy_pickle.py:579
+	[Errno 2] No such file or directory: '/joblib_RL24_Model.pkl'

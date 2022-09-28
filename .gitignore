@@ -1,3 +1,17 @@
+cloudsql
+delete_later
+sp.sql
+db_data
+cloud_sql_proxy
+credentials.json
+test_connection.py
+*.ini
+*.pkl
+**/RF_models/**
+logs/**
+docker-compose.yml
+.idea/
+
 # History files
 .Rhistory
 .Rapp.history
