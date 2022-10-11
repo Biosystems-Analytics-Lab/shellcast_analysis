@@ -22,9 +22,11 @@ RUN R -e 'install.packages(c("sf", "geojsonsf", "raster", "rgdal", "tidyverse", 
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+ENV TZ=America/New_York
 
 RUN mkdir -pv /shellcast
 COPY . /shellcast
 COPY ./requirements.txt /shellcast
 #COPY install_packages.R /app
 RUN pip3 install -r /shellcast/requirements.txt
+

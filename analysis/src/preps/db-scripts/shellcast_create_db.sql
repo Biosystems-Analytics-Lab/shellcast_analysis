@@ -1,5 +1,5 @@
 -- Create database
-CREATE DATABASE shellcast_nc;
+-- CREATE DATABASE shellcast_nc;
 
 USE shellcast_nc;
 
@@ -34,8 +34,8 @@ CREATE TABLE leases (
 	grow_area_desc varchar(50) NULL,
 	cmu_name varchar(10) NOT NULL,
 	rainfall_thresh_in decimal(3, 2) NULL,
-	latitude double NULL,
-	longitude double NULL,
+	latitude decimal(10, 8) NULL,
+	longitude decimal(11, 8) NULL,
 	created datetime DEFAULT NOW(),
 	updated datetime DEFAULT NOW() ON UPDATE NOW()
 );
@@ -80,8 +80,7 @@ CREATE TABLE cmu_probabilities (
   prob_1d_perc tinyint(3) NULL,
   prob_2d_perc tinyint(3) NULL,
   prob_3d_perc tinyint(3) NULL,
-  created datetime DEFAULT NOW(),
-  updated datetime DEFAULT NOW() ON UPDATE NOW()
+  created datetime DEFAULT NOW()
 );
 
 -- Mobile phone service providers

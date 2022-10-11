@@ -11,6 +11,7 @@ test_connection.py
 logs/**
 analysis/logs/
 docker-compose.yml
+cloud_sql_proxy.exe
 .idea/
 
 # History files
