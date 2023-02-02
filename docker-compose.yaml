@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+    analysis:
+      container_name: shellcast_analysis
+      build:
+        context: .
+        dockerfile: Dockerfile
+      volumes:
+        - .:/analysis
+      tty: true
