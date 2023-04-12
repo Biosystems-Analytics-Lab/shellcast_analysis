@@ -1,4 +1,4 @@
-__pycache__/
+**/__pycache__
 .idea/
 cloud_sql_proxy.exe
 sqlauthproxy.bat
