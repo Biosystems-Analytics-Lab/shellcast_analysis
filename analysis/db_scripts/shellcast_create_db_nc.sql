@@ -17,7 +17,7 @@ CREATE TABLE users (
 	firebase_uid varchar(28) NULL,
 	phone_number varchar(11) NULL,
 	service_provider_id int(5) UNSIGNED ZEROFILL NULL,
-	email varchar(50) NULL,
+	email varchar(50) NOT NULL,
 	email_pref boolean NOT NULL DEFAULT false,
 	text_pref boolean NOT NULL DEFAULT false,
 	prob_pref tinyint(3) NOT NULL DEFAULT 75,
@@ -78,8 +78,7 @@ CREATE TABLE cmu_probabilities (
   prob_1d_perc tinyint(3) NULL,
   prob_2d_perc tinyint(3) NULL,
   prob_3d_perc tinyint(3) NULL,
-  created datetime DEFAULT NOW(),
-  updated datetime DEFAULT NOW() ON UPDATE NOW()
+  created datetime DEFAULT NOW()
 );
 
 -- Mobile phone service providers

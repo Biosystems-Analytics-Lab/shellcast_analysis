@@ -1,5 +1,3 @@
-
-
 import os
 from datetime import datetime
 from pathlib import Path
@@ -12,6 +10,14 @@ LOGS_DIR = os.path.join(ROOT_DIR, 'logs')
 
 # [ File path]
 CONFIG_INI = os.path.join(ROOT_DIR, 'config.ini')
+LOGGING_NC = os.path.join(ROOT_DIR, 'logging_nc.yaml')
+LOGGING_SC = os.path.join(ROOT_DIR, 'logging_sc.yaml')
+
+# [Email]
+EMAIL_SENDER = 'mshukun@ncsu.edu'
+EMAIL_PASSWORD = os.environ.get('SHELLCAST_GMAIL_APP')
+EMAIL_RECEIVER = ['mshukun@ncsu.edu']
+EMAIL_SUBJECT = 'ShellCast Analysis: Error'
 
 # [ FTP ]
 FTP_URL = 'ftp.wpc.ncep.noaa.gov'
@@ -30,8 +36,14 @@ TIFF_PREFIX = 'tp'
 # WGS84 = 'epsg:4326'
 
 # [ Other ]
-HOURS = [24, 48, 72]
+VALID_HOURS = ['f030', 'f054', 'f078']
+Z_RUN = '06'
+TO_HOUR = -6
 GRB_RES_X = 2539.703
 GRB_RES_Y = 2539.702
-# CYGWIN_CMD = 'C:/cygwin64/bin/bash.exe'
+
+# VALID_HOURS = ['f024', 'f048', 'f072']
+# Z_RUN = '12'
+# TO_HOUR = 0
+
 

@@ -17,7 +17,7 @@ CREATE TABLE users (
 	firebase_uid varchar(28) NULL,
 	phone_number varchar(11) NULL,
 	service_provider_id int(5) UNSIGNED ZEROFILL NULL,
-	email varchar(50) NULL,
+	email varchar(50) NOT NULL,
 	email_pref boolean NOT NULL DEFAULT false,
 	text_pref boolean NOT NULL DEFAULT false,
 	prob_pref tinyint(3) NOT NULL DEFAULT 75,
@@ -32,23 +32,25 @@ CREATE TABLE leases (
 	lease_id varchar(20) NOT NULL PRIMARY KEY,
 	grow_area_name varchar(3) NULL,
 	grow_area_desc varchar(50) NULL,
-	cmu_name varchar(10) NOT NULL,
-	rainfall_thresh_in decimal(3, 2) NULL,
-	latitude double NULL,
-	longitude double NULL,
+	cmu_name varchar(10) NULL,
+	rainfall_thresh_in decimal(3, 2) NOT NULL,
+	latitude double NOT NULL,
+	longitude double NOT NULL,
 	created datetime DEFAULT NOW(),
 	updated datetime DEFAULT NOW() ON UPDATE NOW()
 );
 
 -- Stores information about user leases.
+-- CONSTRAINT unique_leases_per_user UNIQUE (user_id, lease_id)
 CREATE TABLE user_leases (
 	id int(5) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user_id int(5) UNSIGNED ZEROFILL NOT NULL,,
+    user_id int(5) UNSIGNED ZEROFILL NOT NULL,
 	lease_id varchar(20) NOT NULL,
 	created datetime DEFAULT NOW(),
     deleted datetime DEFAULT NOW(),
 	updated datetime DEFAULT NOW() ON UPDATE NOW(),
-	CONSTRAINT unique_leases_per_user UNIQUE (user_id, lease_id)
+	FOREIGN KEY (user_id) REFERENCES users(id),
+	FOREIGN KEY (lease_id) REFERENCES leases(lease_id)
 );
 
 -- Stores a log of all notifications that are sent to users.
