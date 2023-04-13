@@ -2,18 +2,20 @@
 Project: ShellCast South Carolina
 Date: November 2022 - 2023
 """
+import sys
+import os
 
-from shellcast_pqpf.pqpf import utils
-from shellcast_pqpf.pqpf import setup_logging
-from constants import ROOT_DIR, LOGGING_SC
+script_dir = os.path.join(os.path.dirname(__file__), 'src')
+sys.path.append(script_dir)
+
+import setup_logging
 
 STATE = 'SC'
 
-utils.create_log_files(STATE)
+setup_logging.create_log_files(STATE)
+setup_logging.setup_logger_yaml(os.path.join(os.path.dirname(__file__), 'logging_sc.yaml'))
 
-setup_logging.setup_logger_yaml(LOGGING_SC)
-
-from shellcast_pqpf.pqpf import pqpf
+from pqpf import pqpf
 import logging
 
 logger = logging.getLogger(__name__)
