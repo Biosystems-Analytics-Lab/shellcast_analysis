@@ -479,14 +479,13 @@ class PQPF:
                 'cmu': [self.cmu_shp, self.config[self.state]['CMU_SHP_COL_CMU_NAME']]
                 }
         csv_fpaths = []
-        csv_out_fpath = os.path.join(self.outputs_dir, f'pqpf_cmu_probs_{self.outfile_date}.csv')
 
         # Get data
         utils.delete_grbs(self.grb_raw_dir)
         files = self.get_files_to_download()
         self.download_grbs(files)
         to_db_bool = self.check_grb_files()
-
+        csv_out_fpath = os.path.join(self.outputs_dir, f'pqpf_cmu_probs_{self.outfile_date}.csv')
         # Process data
         self.small_grb()
         thresholds = self.get_thresholds()

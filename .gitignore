@@ -10,7 +10,7 @@ analysis/data/pqpf/nc/intermediate
 analysis/data/pqpf/nc/outputs
 analysis/data/pqpf/sc/intermediate
 analysis/data/pqpf/sc/outputs
-analysis/src/shellcast_pqpf/tests
+analysis/src/tests
 dependencies
 
 
