@@ -106,7 +106,7 @@ class PQPF:
                 sys.exit(1)
         except Exception as e:
             msg = 'Files to download failed.'
-            utils.error_process(self.state, msg, logger, e)
+            utils.error_process(self.state, msg, e)
 
     def download_grbs(self, files: List[str]) -> None:
         """
@@ -132,7 +132,7 @@ class PQPF:
             logger.info(utils.done_str)
         except Exception as e:
             msg = 'GRB file download failed.'
-            utils.error_process(self.state, msg, logger, logger, e)
+            utils.error_process(self.state, msg, e)
 
     def small_grb(self) -> None:
         """
@@ -150,7 +150,7 @@ class PQPF:
             logger.info(utils.done_str)
         except Exception as e:
             msg = 'Subset GRIB file failed.'
-            utils.error_process(self.state, msg, logger, logger, e)
+            utils.error_process(self.state, msg, e)
 
     def grb_to_tiff(self, thresholds: List[float]) -> None:
         """
@@ -182,7 +182,7 @@ class PQPF:
             logger.info(utils.done_str)
         except Exception as e:
             msg = 'GRB to TIFF transformation failed.'
-            utils.error_process(self.state, msg, logger, logger, e)
+            utils.error_process(self.state, msg, e)
 
     def get_thresholds(self) -> List[float]:
         """
@@ -207,7 +207,7 @@ class PQPF:
                 raise
         except Exception as e:
             msg = 'Failed to get rainfall thresholds.'
-            utils.error_process(self.state, msg, logger, logger, e)
+            utils.error_process(self.state, msg, e)
         else:
             del gdf
             gc.collect()
@@ -252,7 +252,7 @@ class PQPF:
 
         except Exception as e:
             msg = 'Raster values to points failed.'
-            utils.error_process(self.state, msg, logger, logger, e)
+            utils.error_process(self.state, msg, e)
         else:
             del gdf
             gc.collect()
@@ -295,7 +295,7 @@ class PQPF:
 
         except Exception as e:
             msg = 'CMU mean process failed.'
-            utils.error_process(self.state, msg, logger, logger, e)
+            utils.error_process(self.state, msg, e)
         else:
             del aggs
             gc.collect()
@@ -318,7 +318,7 @@ class PQPF:
             logger.info(utils.done_str)
         except Exception as e:
             msg = 'Resampling failed.'
-            utils.error_process(self.state, msg, logger, logger, e)
+            utils.error_process(self.state, msg, e)
 
     def zonal_statis_to_df(self, shp, tiff) -> Type:
         """
@@ -336,7 +336,7 @@ class PQPF:
             return df
         except Exception as e:
             msg = 'Zonal Statistics to DataFrame failed.'
-            utils.error_process(self.state, msg, logger, e)
+            utils.error_process(self.state, msg, e)
 
     def zonal_stats_to_csv(self) -> str:
         """
@@ -385,7 +385,7 @@ class PQPF:
                 return out_csv_path
         except Exception as e:
             msg = 'Zonal Statistics to CSV failed.'
-            utils.error_process(self.state, msg, logger, e)
+            utils.error_process(self.state, msg, e)
 
     def save_to_db(self, csv_path: str) -> None:
         """
@@ -408,7 +408,7 @@ class PQPF:
             logger.info(utils.done_str)
         except Exception as e:
             msg = 'Save to DB failed.'
-            utils.error_process(self.state, msg, logger, e)
+            utils.error_process(self.state, msg, e)
 
     def db_connection_test(self):
         logger.info('[DB connection test]')
