@@ -44,7 +44,9 @@ Data URL:  https://ftp.wpc.ncep.noaa.gov/pqpf/conus/
 ### System Settings
 #### Prerequisite
 * MySQL database and database tables should be created before running ShellCast analysis.
-* Create conda virtual environment
+* Create virtual environment.
+  * Note: If you encountered "rasterio" installation problem with pip, try to use conda virtual environment.
+
 * wgrib2 installed - wgrib2 is available for Linux/MacOS. Cygwin installation is required for Windows.
   * https://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/
   * https://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/compile_questions.html
@@ -54,6 +56,12 @@ Data URL:  https://ftp.wpc.ncep.noaa.gov/pqpf/conus/
 
 * GDAL installed - For windows [OSGEO4W](https://trac.osgeo.org/osgeo4w/) installation might be easiest. Set environment variable after successful OSGEO4W installation.  
   * https://gisforthought.com/setting-up-your-gdal-and-ogr-environmental-variables/
+
+* gcloud CLI installed
+  * https://cloud.google.com/sdk/docs/install
+
+* Cloud SQL Auth proxy downloaded
+  * https://cloud.google.com/sql/docs/mysql/sql-proxy
 
 * Input data prepared
 

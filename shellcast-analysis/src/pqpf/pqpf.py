@@ -428,7 +428,7 @@ class PQPF:
     def csv_concat(lease_csv_fpath, cmu_csv_fpath, csv_out_fpath):
         """
         Merge lease points' probabilities and the CMU centroid point probabilities where the CMUs
-        don't have lease pointsl
+        don't have lease points.
         Args:
             lease_csv_fpath (str): lease probabilities CSV file path
             cmu_csv_fpath (str): CMU probabilities CSV file path
